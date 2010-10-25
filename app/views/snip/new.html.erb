@@ -1,0 +1,16 @@
+<h1>Add a New Code Snippet</h1>
+
+<% if params[:snippet_id] != nil %>
+	<strong> <%= params[:notice] %></strong>
+	<p>
+		<a href="http://<%= request.host %>:<%= request.port %>/snip/<%= params[:snippet_id] %>">http://<%= request.host %>:<%= request.port %>/snip/<%= params[:snippet_id] %></a>	
+	</p>
+<pre>	
+http://<%= request.host %>:<%= request.port %>/snip/<%= params[:snippet_id] %></strong>
+</pre>
+<%end%>	
+
+<%= render 'form' %>
+	
+
+<%= link_to 'Back', :controller => 'snip', :action => 'index' %>

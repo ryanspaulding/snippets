@@ -1,0 +1,17 @@
+<h1>Snippet <%= @snip.id %></h1>
+
+<div class="snippet">
+        <div class="snippet_header">
+
+                <span class="snippet_header_link"><%= link_to("snippet:#{@snip.id}", :controller => 'snip', :action => 'show', :id => @snip.id) %></span>
+                <span><%= @snip.title %></span>
+                <span class="snippet_header_date"><abbr title="<%= @snip.created_at %>"><%= distance_of_time_in_words(Time.now, @snip.created_at) %></abbr></span>
+        </div>
+        <div>
+                <pre><%= @snip.snippet %></pre>
+        </div>
+</div>
+
+<p>
+<%= link_to("Snippet List", :controller => "snip", :action => "index") %> | <%= link_to("Add A Snippet", :controller => "snip", :action => "new") %>
+</p>

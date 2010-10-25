@@ -1,0 +1,21 @@
+
+
+<%= form_for :snip do |f| %>
+	<p>
+	<%= f.label :title %>
+	<%= f.text_field :title %>
+	</p>
+	<p>
+	<%= f.label :tag %>
+	<%= f.text_field :tag %>
+	</p>
+	<p>
+	<%= f.label :snippet %><br />
+	<%= f.text_area :snippet %>
+	</p>
+	
+	<p>
+	<%= f.submit %>
+	</p>
+
+<%end%>

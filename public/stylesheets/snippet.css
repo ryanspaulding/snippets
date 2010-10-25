@@ -1,0 +1,34 @@
+
+
+body {
+	font-family: helvetica, arial
+}
+
+
+div.snippet_header {
+	color: #666;
+	background-color: #DBDBDB;
+	padding-bottom: 3px;
+	border-bottom: 1px solid #333;
+}
+
+/* get the spacing for the spans in the header */
+span.snippet_header_link a:visited, a:hover, a  {
+	color: #82add8;
+	margin-left: 3px;
+	margin-right: 25px;
+}
+
+span.snippet_header_date {
+	float: right;
+	padding-right: 15px;
+}
+	
+	
+
+/* the div that houses a single snippet */
+div.snippet {
+	border: 1px solid #333;
+	width: 800px;
+	margin-top: 10px;
+}
