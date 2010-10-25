@@ -9,6 +9,8 @@ class SnipController < ApplicationController
 
   def new
 	
+	@snip = Snip.new
+	
 	respond_to do |format|
 		format.html # new.html.erb
 	end
