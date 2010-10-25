@@ -1,16 +1,23 @@
 
 
 <%= form_for :snip do |f| %>
+	<% if @snip.errors.any? %>
+		<ul>
+		<% @snip.errors.full_messages.each do |msg| %>
+			<li><%= msg %></li>
+		<%end%>
+		</ul>
+	<%end%>
 	<p>
-	<%= f.label :title %>
+	<%= f.label(:title, "Title (required):") %>
 	<%= f.text_field :title %>
 	</p>
 	<p>
-	<%= f.label :tag %>
+	<%= f.label(:tag, "Tag") %>
 	<%= f.text_field :tag %>
 	</p>
 	<p>
-	<%= f.label :snippet %><br />
+	<%= f.label(:snippet, "Snippet (required):") %><br />
 	<%= f.text_area :snippet %>
 	</p>
 	
