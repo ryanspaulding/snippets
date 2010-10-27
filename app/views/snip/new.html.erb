@@ -2,12 +2,8 @@
 
 <% if params[:snippet_id] != nil %>
 	<strong> <%= params[:notice] %></strong>
-	<p>
-		<a href="http://<%= request.host %>:<%= request.port %>/snip/<%= params[:snippet_id] %>">http://<%= request.host %>:<%= request.port %>/snip/<%= params[:snippet_id] %></a>	
-	</p>
-<pre>	
-http://<%= request.host %>:<%= request.port %>/snip/<%= params[:snippet_id] %></strong>
-</pre>
+
+	<%= build_link(parmas[:snippet_id]) %>
 <%end%>	
 
 <%= render 'form' %>
